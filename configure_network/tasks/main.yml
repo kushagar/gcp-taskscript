@@ -1,0 +1,7 @@
+---
+# tasks file for configure_network
+- name: configure name servers
+  shell: sudo sed -i '1s/^/nameserver 8.8.8.8 \/n/' /etc/resolv.conf
+      
+- name: change gateway 
+  shell: sudo ip route delete default; sudo ip route add default via 10.182.0.5 dev ens4

@@ -1,0 +1,9 @@
+---
+- name: NetworkEvaluationPlaybook
+  hosts: NetworkServers
+  become: yes
+  become_method: sudo
+  roles:
+    - configure_network
+
+

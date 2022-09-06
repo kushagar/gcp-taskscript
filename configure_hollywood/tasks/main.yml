@@ -1,0 +1,7 @@
+---
+# tasks file for configure_hollywood
+- name: install hollywood
+  become: yes
+  ansible.builtin.apt:
+    name: hollywood
+    state: present
